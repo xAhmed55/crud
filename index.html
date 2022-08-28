@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <!-- head Section Start-->
+        <div class="head">
+            <h2>crud</h2>
+            <p>product management system</p>
+        </div>
+        <!--Head Section End-->
+
+        <!--Inputs Section Start-->
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="ADS">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+                    <small id="total"></small>
+                </div>
+                <input type="number" id="count" placeholder="Count">
+                <input type="text" id="category" placeholder="Category">
+                <button id="submit">Create</button>
+        </div>
+        <!--Inputs Section Start-->
+
+        <!--outputs Section Start-->
+        <div class="outputs">
+            <!--Search Block Start-->
+
+            <div class="searchblock">
+                <input onkeyup="searchdata(this.value)" type= "text" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button onclick="getSearshMood(this.id)"  id="searchTitle">Search By Title</button>
+                    <button onclick="getSearshMood(this.id)"  id="searchcategory">Search By Category</button>
+                </div>
+            
+
+            </div>
+            <!--SearchBlock End-->
+
+            <!--Table Start-->
+            <div id="deleteall">
+                
+            </div>
+            <table>
+                <tr class="trr">
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>ADS</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>UpDate</th>
+                    <th>Delete</th>
+                </tr>
+
+                <tbody id="tbody">
+                   
+                </tbody>
+
+            </table>
+            <!--Table End-->
+
+        </div>
+        <!--outputs Section Start-->
+    </div>
+    <script src="Main.js"></script>
+</body>
+</html>
